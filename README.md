@@ -79,7 +79,6 @@ After training, the model achieves high accuracy (>85%) on the CIFAR-10 test set
 
 ## 🔮 Future Work | کارهای آینده
 - Expand dataset for more real-world classes
-- Add data augmentation
 - Convert model to TensorFlow Lite for mobile deployment
 - Integrate webcam-based real-time detection
 
