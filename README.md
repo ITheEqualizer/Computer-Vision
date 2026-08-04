@@ -12,7 +12,7 @@ This project is a **Deep Learning-based Computer Vision system** that identifies
 A **complete, step-by-step wiki** explaining every line of code — including **all code blocks, English + Persian explanations**, model breakdown, training pipeline, evaluation, and deployment — is available here:
 
 👉 **Visit the Full Wiki:**  
-https://github.com/ITheEqualizer/Computer-Vision/wiki
+https://github.com/ITheEqualizer/Computer-Vision-CIFAR-10/wiki
 
 🔹 The wiki includes the following full sections:
 
@@ -37,7 +37,7 @@ https://github.com/ITheEqualizer/Computer-Vision/wiki
 
 ## 📂 Repository Structure | ساختار مخزن
 ```
-Computer-Vision/
+Computer-Vision-CIFAR-10/
 ├── saved_model/
 │   ├── cnn_cifar10.keras              # Trained CNN model
 │   ├── best_weights.weights.h5        # Saved model weights
@@ -91,9 +91,9 @@ print('Predicted class:', np.argmax(predictions))
 ---
 
 ## 📊 Results & Evaluation | نتایج و ارزیابی
-After training, the model achieves high accuracy (>85%) on the CIFAR-10 test set. You can visualize the accuracy/loss graphs or confusion matrix using `matplotlib`.
+The saved notebook records 82.52% accuracy and 0.5162 loss on the 10,000-image CIFAR-10 test set. You can visualize the accuracy/loss graphs or confusion matrix using `matplotlib`.
 
-پس از آموزش، مدل دقت بالایی (بیش از ۸۵٪) بر روی داده‌های آزمایشی دارد. برای مشاهده عملکرد می‌توانید از نمودارهای دقت و خطا استفاده کنید.
+دفترچهٔ ذخیره‌شده روی ۱۰٬۰۰۰ تصویر آزمایشی CIFAR-10، دقت ۸۲٫۵۲ درصد و خطای ۰٫۵۱۶۲ را ثبت کرده است. برای مشاهده عملکرد می‌توانید از نمودارهای دقت و خطا استفاده کنید.
 
 ---
 
@@ -120,4 +120,3 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 
 > 🌍 *A fully bilingual README to help both English and Persian speakers understand and use this project effectively.*  
 > 📘 *For full project documentation, visit the wiki!*
-
