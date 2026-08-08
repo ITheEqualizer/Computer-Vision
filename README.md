@@ -76,14 +76,21 @@ from tensorflow import keras
 from tensorflow.keras.preprocessing import image
 import numpy as np
 
+class_names = [
+    'airplane', 'automobile', 'bird', 'cat', 'deer',
+    'dog', 'frog', 'horse', 'ship', 'truck',
+]
+
 model = keras.models.load_model('saved_model/cnn_cifar10.keras')
 
-img = image.load_img('img.jpg', target_size=(32, 32))
+img = image.load_img('img.jpg', target_size=(32, 32), color_mode='rgb')
 img_array = image.img_to_array(img)
 img_array = np.expand_dims(img_array, axis=0) / 255.0
 
-predictions = model.predict(img_array)
-print('Predicted class:', np.argmax(predictions))
+probabilities = model.predict(img_array, verbose=0)[0]
+predicted_index = int(np.argmax(probabilities))
+print('Predicted class:', class_names[predicted_index])
+print('Confidence:', f'{probabilities[predicted_index]:.2%}')
 ```
 
 برای اجرای مدل کافی است آن را با استفاده از Keras بارگذاری کرده و تصویر مورد نظر را برای پیش‌بینی وارد کنید.
