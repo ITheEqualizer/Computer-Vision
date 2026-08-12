@@ -95,6 +95,13 @@ print('Confidence:', f'{probabilities[predicted_index]:.2%}')
 
 برای اجرای مدل کافی است آن را با استفاده از Keras بارگذاری کرده و تصویر مورد نظر را برای پیش‌بینی وارد کنید.
 
+### 3️⃣ Validate Saved Model | اعتبارسنجی مدل ذخیره‌شده
+Verify that the checked-in model still accepts CIFAR-10 image tensors, returns
+a valid 10-class probability distribution, and recognizes both sample images:
+```bash
+python -m unittest discover -s tests -v
+```
+
 ---
 
 ## 📊 Results & Evaluation | نتایج و ارزیابی
